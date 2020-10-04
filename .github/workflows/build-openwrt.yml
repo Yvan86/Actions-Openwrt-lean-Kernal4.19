@@ -1,11 +1,3 @@
-#=================================================
-# https://github.com/P3TERX/Actions-OpenWrt
-# Description: Build OpenWrt using GitHub Actions
-# Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
-#=================================================
-
 name: Build OpenWrt
 
 on:
@@ -87,7 +79,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
     - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
+      uses: csexton/debugger-action@master
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
 
     - name: Download package
